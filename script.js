@@ -14,3 +14,11 @@ async function getIpAddress() {
   document.getElementById('current-region').textContent = data.location.region;
   document.getElementById('current-city').textContent = data.location.city;
   document.getElementById('current-zone').textContent = data.location.timezone;
+  new mapboxgl.Marker()
+  .setLngLat([data.location.lng, data.location.lat])
+  .addTo(map);
+
+map.zoomTo(11, {
+  duration: 2000,
+  center: [data.location.lng, data.location.lat]
+});
