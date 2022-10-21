@@ -36,3 +36,10 @@ try {
     const response = await fetch(apiUrl);
     const data = await response.json();
     console.log(data)
+    //Seting the api in the ui
+    const { ip, isp } = data;
+    document.getElementById('current-ip').textContent = ip;
+    document.getElementById('current-isp').textContent = isp;
+    document.getElementById('current-region').textContent = data.location.region;
+    document.getElementById('current-city').textContent = data.location.city;
+    document.getElementById('current-zone').textContent = data.location.timezone;
