@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>IP ADDRESS TRACKER</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	<script
+		src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+	<link rel="stylesheet"
+		href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+		type="text/css">
+</head>
+
+<body>
+	<div class="container-fluid mainContainer">
+		<div class="titleAndSearchBar">
+			<h3 class="appTitle">IP ADDRESS TRACKER</h3>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" id="mybar"
+								placeholder="Search for any IP address or domain" aria-label="Recipient's username"
+								aria-describedby="button-addon2">
+							<button class="btn btn-dark" type="button" id="submit"><b
+									id="searchButton">></b></button>
+						</div>
+					</div>
+					<div class="col-md-4"></div>
+				</div>
+			</div>
+
+			<h4 class="muted-title"></h4>
+
+			<div class="container display-container">
+				<div class="col-md-3 info-block">
+					<h4 class="muted-title">IP ADDRESS</h4>
+					<span id="current-ip" class="results">192.212.174.101</span>
+				</div>
+
+				<div class="col-md-3 info-block">
+					<h4 class="muted-title">LOCATION</h4>
+					<span id="current-region" class="results">Brooklyn</span>
+					<span id="current-city" class="results">NY 10001</span>
+				</div>
+
+				<div class="col-md-3 info-block">
+					<h4 class="muted-title">TIMEZONE</h4>
+					<span id="current-zone" class="results">UTC +2:00</span>
+				</div>
+				<div class="col-md-3 info-block info-block-last">
+					<h4 class="muted-title">ISP</h4>
+					<span id="current-isp" class="results">Rain</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='map' style='height: 100vh; position: relative;'>
+
+	</div>
+
+
+	<script src="index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
