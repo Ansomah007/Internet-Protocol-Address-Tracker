@@ -63,5 +63,12 @@ var map = new mapboxgl.Map({
 });
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
+var directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+    unit: 'metric',
+    profile: 'mapbox/cycling'
+  });
+  
+
 
 
