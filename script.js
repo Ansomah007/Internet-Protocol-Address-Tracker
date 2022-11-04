@@ -70,6 +70,8 @@ var directions = new MapboxDirections({
   });
   function getCurrentLocation() {
     map.addControl(directions, 'top-left');
+    map.addControl(new mapboxgl.GeolocateControl({
+      positionOptions: {
   
   
 
