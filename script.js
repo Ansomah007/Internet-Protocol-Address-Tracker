@@ -72,6 +72,10 @@ var directions = new MapboxDirections({
     map.addControl(directions, 'top-left');
     map.addControl(new mapboxgl.GeolocateControl({
       positionOptions: {
+        enableHighAccuracy: true
+      },
+      
+
   
   
 
