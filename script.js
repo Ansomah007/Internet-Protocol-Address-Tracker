@@ -68,6 +68,9 @@ var directions = new MapboxDirections({
     unit: 'metric',
     profile: 'mapbox/cycling'
   });
+  function getCurrentLocation() {
+    map.addControl(directions, 'top-left');
+  
   
 
 
