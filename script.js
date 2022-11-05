@@ -74,6 +74,9 @@ var directions = new MapboxDirections({
       positionOptions: {
         enableHighAccuracy: true
       },
+   
+
+  }
       
 
   
